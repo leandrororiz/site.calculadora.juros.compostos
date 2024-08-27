@@ -1,0 +1,110 @@
+<!doctype html><!-- Inclui a codificação, o título da página, e as referências aos estilos CSS do Bootstrap e ao seu arquivo de estilo personalizado. -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8"><!-- Define a codificação de caracteres para UTF-8, que inclui a maioria dos caracteres de todos os idiomas. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Define a largura da viewport para corresponder à largura do dispositivo, essencial para design responsivo. -->
+    <title>Bootstrap demo</title><!-- Define o título da página que aparece na aba do navegador. -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="invest.css"><!-- inclui o título da página e referências ao CSS do Bootstrap e ao seu arquivo de estilo personalizado. -->
+  </head>
+<style>
+   /* Estilo para o contêiner do formulário com cor de fundo, bordas arredondadas, sombra e largura. */
+  .container {
+    background-color:  rgb(4, 135, 250);/* Cor de fundo azul */
+    padding: 20px;/* Espaçamento interno */
+    border-radius: 8px;/* Bordas arredondadas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);/* Sombra ao redor do container */
+    width: 300px;/* Largura do container */
+
+}
+
+/* Define o layout do formulário em coluna. */
+form {
+    display: flex;
+    flex-direction: column;/* Layout em coluna para os itens do formulário */
+}
+
+/* Estilo para os rótulos do formulário. */
+label {
+    margin: 10px 0 5px;/* Margens ao redor dos rótulos */
+    color: gold;/* Cor do texto dos rótulos */
+}
+
+/* Estilo para os campos de entrada do formulário. */
+input {
+    padding: 10px;/* Espaçamento interno */
+    margin-bottom: 10px; /* Margem inferior */
+    border: 1px solid #100f0f;/* Borda dos campos de entrada */
+    border-radius: 4px;/* Bordas arredondadas dos campos */
+}
+
+/* Estilo específico para o botão de cálculo. */
+#b1 {
+    margin-top: 10px;/* Margem superior do botão */
+  
+}
+
+/* Estilo para a área de resultado.  */
+.resultado{
+  color: white;/* Cor do texto do resultado */
+}
+
+/* Estilo para o resultado do cálculo. */
+#resultado {
+    margin-top: 20px;/* Margem superior */
+    font-size: 18px;/* Tamanho da fonte */
+    font-weight: bold;/* Negrito */
+    color: gold;/* Cor do texto */
+}
+
+/* Estilo para a imagem animada. */
+#m1 {
+    margin-left: -570px;/* Margem esquerda */
+    height: 400px;/* Altura da imagem */
+    margin-right: 180px;/* Margem direita */
+}
+
+/* Define o layout da seção com o formulário e a imagem. */
+section{
+  display: flex;
+  flex-direction: row;/* Layout em linha para os itens na seção */
+}
+
+</style>
+  <body>
+    <header>
+      <h1> <img id="im1" src="./img/Imagem.png" alt="Logo" width="50" height="50" class="d-inline-block align-text-top">
+       L.E INVESTIMENTOS</h1>
+    </header>
+    <br><br><br><br><br><br><br><br><br><br>
+
+    <section> <!-- Seção contendo o formulário e a imagem -->
+    <div class="container"><!-- Contém o formulário de cálculo de juros e o resultado. -->
+      <form>
+          <label ><strong>Capital (R$):</strong> </label><!-- Campo para o capital inicial -->
+          <input type="number" id="inicial">   <!-- Campo de entrada para o valor do capital inicial -->
+          <label><strong>Taxa de Juros:</strong></label> <!-- Campo para a taxa de juros -->
+          <input type="number" id="taxaJuros"> <!-- Campo de entrada para a taxa de juros -->
+          <label><strong>Tempo Total (anos):</strong></label><!-- Campo para o tempo total em anos -->
+          <input type="number" id="tempo">  <!-- Campo de entrada para o tempo total em anos -->
+         <button id="b1" type="button" onclick="calcularJuros()" class="btn btn-warning"><strong>Calcular</strong></button>  <!-- Botão para calcular os juros -->
+      </form>
+      <div id="resultado"></div> <!-- Div para exibir o resultado do cálculo -->
+  </div>
+
+<img id="m1" src="./img/dinheiro.gif" alt=""> <!-- Imagem animada -->
+</section>
+
+<br><br>
+<!-- Fornecem informações sobre os investimentos e uma lista dos tipos de investimentos oferecidos. -->
+<p id="p1"><strong>Na <strong style="color: gold;">L.E Investimentos</strong>  temos investimentos para todos os perfis.</strong></p>
+<p id="p2"><strong>Renda fixa  |  Renda variável  |   Fundos  |  Ofertas públicas  |  COE</strong></p>
+<br>
+
+
+  <script src="index.js"></script><!-- Inclusão do script para a lógica da calculadora -->
+
+  <!-- Inclui o JavaScript do Bootstrap para garantir que as funcionalidades interativas do carousel e outros componentes funcionem corretamente. -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
